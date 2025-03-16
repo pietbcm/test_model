@@ -3,7 +3,7 @@ How to use:
 - Copy generated depth model to this folder
 - Add the following code at the top:
 
-'''
+```
 #include "depth_model.h"
 #include <stdio.h>
 #include <stdlib.h>
@@ -48,12 +48,12 @@ int main() {
   free(tensor);
   return 0;
 }
-'''
+```
 
 - Use print_array in the entry function to print some stuff
 
 - Compile using gcc and run it:
-'''
+```
 gcc depth_model.c
 ./a.out
-'''
+```
