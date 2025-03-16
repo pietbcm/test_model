@@ -57,3 +57,10 @@ int main() {
 gcc depth_model.c
 ./a.out
 ```
+
+- Add the following line to the eval function in MAV_depth_estimation, inside the for loop (so below "for i, (img, depth_gt) in enumerate(eval_loader):"):
+```
+np.savetxt("{THIS_FOLDER_LOCATION}/test_img.txt", img.numpy().reshape(-1), fmt="%.6f")
+```
+
+This will make sure you have the same image in python and here. Put num_imgs=1 to just evaluate 1 image
